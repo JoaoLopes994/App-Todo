@@ -1,4 +1,3 @@
-# App-Todo
 # API TO DO
 - Projeto de aplicativo "to do" do curso Resilia, no módulo 3
 
