@@ -3,7 +3,14 @@
 
 ## INSTALAÇÃO
 
-- Você precisa do "Node.js" instalado na sua máquina.
+- Você precisará do "Node.js" instalado na sua máquina.
+- Com o Node.js instalado, clone o rrepositório e dentro do terminal no editor de texto ou cmd, execute " npm install", e depois de instalar execute  o  "npm start".
+
+```sh
+npm install
+npm start
+```
+- Checar se o servidor está rodando na rota 8080
 
 ## Rotas
 - O projeto foi feito usando o conceito de API REST com 4 verbos HTTP, que são eles: GET, POST, PUT e DELETE, utilizando-se de requisições à duas tabelas (usuário e tarefa), que retornam informações do banco de dados.
@@ -11,12 +18,12 @@
 ## Métodos
 
 - Método GET:
-Para consultar apenas um usuário ou uma tarefa, utilize o seu testador de requisições de preferência no método GET(insomnia, postman) e use as rotas, uma de cada vez: http://localhost:8000/usuario/:id,
-http://localhost:8000/tarefa/:id,
+Para consultar apenas um usuário ou uma tarefa, utilize o seu testador de requisições de preferência no método GET(insomnia, postman) e use as rotas, uma de cada vez: http://localhost:8080/usuario/:id,
+http://localhost:8080/tarefa/:id,
 Substitua o " :id " pelos identificadores do usuário, tarefa. O retorno será um json com as informações do usuário ou tarefa .
 
 - Método POST
-Para inserir um usuário, você terá que usar a rota http://localhost:8000/usuário no método POST com os seguintes dados no corpo da requisição:
+Para inserir um usuário, você terá que usar a rota http://localhost:8080/usuário no método POST com os seguintes dados no corpo da requisição:
 ```sh
 {
 	NOME: "Exemplo",
@@ -26,19 +33,19 @@ Para inserir um usuário, você terá que usar a rota http://localhost:8000/usu�
 ```
  
 - E para tarefas : 
-- Utilizar a rota http://localhost:8000/tarefa no método POST com os seguintes dados no corpo da requisição:
+- Utilizar a rota http://localhost:8080/tarefa no método POST com os seguintes dados no corpo da requisição:
 ```sh
 {
 	TITULO: "Exemplo",
 	DESCRICAO: "exemplo@exemplo.com",
 	STATUS: "exemplo",
-    DATACRICAO: "2021-02-16",
-    ID_USUARIO: "1" 
+    	DATACRICAO: "2021-02-16",
+    	ID_USUARIO: "1" 
 }
 ```
 - Método PUT : 
 Na atualização de usuário, acessar a rota
-http://localhost:8000/usuario/:id,
+http://localhost:8080/usuario/:id,
 com o método PUT selecionado, substituindo o " :id " pelo identificador do usuário, com a mesma estrutura do método anterior(POST).
 Apenas os campos de NOME,SENHA,EMAIL devem ser informados no corpo da requisição.
 ```sh
@@ -49,18 +56,10 @@ Apenas os campos de NOME,SENHA,EMAIL devem ser informados no corpo da requisiç�
 }
 ```
 - Método DELETE
-Para deletar um usuário, você terá que usar a rota :  http://localhost:8000/usuario/:id no método DELETE, substituindo o " :id " pelo identificador do usuário.
+Para deletar um usuário, você terá que usar a rota :  http://localhost:8080/usuario/:id no método DELETE, substituindo o " :id " pelo identificador do usuário.
 
-- Para deletar uma tarefa, você terá que usar a rota : http://localhost:8000/tarefa/:id no método DELETE, substituindo o :id pelo identificador da tarefa.
-
-## Instalação
-
-Com o Node.js instalado, clone o rrepositório e dentro do terminal no editor de texto ou cmd, execute " npm install", e depois de instalar execute  o  "npm start".
-
-```sh
-npm install
-npm start
-```
+- Para deletar uma tarefa, você terá que usar a rota : http://localhost:8080/tarefa/:id no método DELETE, substituindo o :id pelo identificador da tarefa.
+- 
 
 ## Tecnologias e Ferramentas
 
